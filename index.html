@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <h1>
+            devfinder
+        </h1>
+        <div class="dark-light">
+            <span class="current-mode">
+                DARK
+            </span>
+            <img src="./assets/icon-moon.svg" alt="" class="current-icon">
+        </div>
+        <section class="search">
+            <input type="text" placeholder="Search GitHub username..." class="search-input">
+            <span>No results</span>
+            <button class="search-button">Search</button>
+        </section>
+    </nav>
+    <main class="main">
+        <div class="profile">
+            <img src="Oval.png" alt="">
+            <div class="details">
+                <h4 class="info">The Octocat</h4>
+                <a href="/">@octocat</a>
+                <p class="lighter">Joined 25 Jan 2011</p>
+            </div>
+        </div>
+        <section class="about-user">
+            <p class="lighter">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+            </p>
+        </section>
+        <div class="followers">
+            
+            <ul>
+                <li>
+                    <p>Repos</p>
+                    8
+                </li>
+                <li>
+                    <p>Followers</p>
+                    3989
+                </li>
+                <li>
+                    <p>Following</p>
+                    157
+                </li>
+            </ul>
+        </div>
+        <ul class="links">
+            <li class="info">
+                <img src="./assets/icon-location.svg">
+                <p class="info">Location</p>
+            </li>
+            <li class="info">
+                <img src="./assets/icon-website.svg" alt="">
+                <p class="info">Website Link</p>
+            </li>
+            <li>
+                <img src="./assets/icon-twitter.svg" alt="">
+                <p class="info">Twitter account</p>
+            </li>
+            <li>
+                <img src="./assets/icon-company.svg" alt="">
+                <p class="info">Company name
+                </p>
+            </li>
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

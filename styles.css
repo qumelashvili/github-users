@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    padding: 31px 24px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    background-color: #F6F8FF;
+    transition: ease-in .3s;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav h1{
+    font-size: 2em;
+}
+.dark-light{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.current-mode{
+    color: #4B6A9B;
+    margin-right: 10px;
+}
+.search{
+    margin-top: 30px;
+}
+.search, .search input{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.search input{
+    background: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    border: transparent;
+    background-image: url(./assets/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: left 16px top 18px;
+    padding-left: 50px;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: #4B6A9B;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.search input:focus{
+    outline: none;
+}
+.search input::placeholder{
+    color: #4B6A9B;
+}
+.search-button{
+    width: 70px;
+    height: 46px;
+    background: #0079FF;
+    border: transparent;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin-left: -78px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+main{
+    width: 100%;
+    background: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    margin-top: 16px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    color: #4B6A9B;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile img{
+    width: 70px;
+    border-radius: 100%;
+}
+.details{
+    margin-left: 16px;
+}
+.details h4{
+    color: #2B3442;
+    font-size: 16px;
+}
+.details a{
+    text-decoration: none;
+    color: #0079FF;
+}
+.details p{
+    color: #697C9A;
+    margin-top: 5px;
+}
+.about-user{
+    margin-top: 34px;
+    line-height: 25px;
+}
+.followers{
+    width: 100%;
+    height: 85px;
+    background: #F6F8FF;
+    border-radius: 10px;
+    margin-top: 23px;
+    padding: 18px 15px;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+.followers ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.followers li p{
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 400;
+}
+.followers li{
+    font-size: 16px;
+    color: black;
+}
+.links{
+    margin-top: 24px;
+}
+.links li{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: 400; 
+}
+.links img{
+    width: 17px;
+    margin-right: 20px;
+}
+.search span{
+    display: none;
+    color: red;
+    position: absolute;
+    right: 450px;
+}
+.search-button:hover{
+    background-color: #60ABFF;
+}
+
+/*SHORTCUTS*/
+.lighter{
+    font-weight: 400;
+}
+.null{
+    color: #697C9A ;
+    opacity: 0.7;
+}
+.alert .search .search-input{
+    border: 1px solid red;
+}
+
+/* NIGHT MODE */
+.dark{
+    background-color: #141D2F;
+    color: #FFFFFF;
+}
+.dark .current-mode{
+    display: none;
+}
+.dark .dark-light::before{
+    content: "LIGHT";
+    margin-right: 10px;
+}
+.dark .current-icon{
+    content: url(./assets/icon-sun.svg);
+}
+.dark main, .dark .search input{
+    background-color: #1E2A47;
+    color: #FFFFFF;
+}
+.dark .details h4, .dark .details p{
+    color: #FFFFFF;
+}
+.dark .followers{
+    background-color: #141D2F;
+}
+.dark .followers li{
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        padding: 144px 100px;
+    }
+    main{
+        padding: 40px;
+    }
+    .profile img{
+        width: 117px;
+    }
+    .details{
+        margin-left: 40px;
+    }
+    .details h4{
+        font-size: 26px;
+    }
+    .details a{
+        font-size: 16px;
+    }
+    .details p{
+        font-size: 15px;
+    }
+    .about-user p{
+        font-size: 15px;
+    }
+    .followers li p{
+        font-size: 13px;
+    }
+    .links{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body{
+        padding: 144px 355px
+    }
+    main{
+        padding: 44px 44px 44px 202px;
+    }
+    .profile img{
+        margin-left: -160px;
+    }
+    .details p{
+        position: relative;
+        top: -60px;
+        left: 320px
+    }
+    .about-user{
+        margin: 0px;
+    }
+    .alert .search span{
+        display: inline;
+    }
+}
